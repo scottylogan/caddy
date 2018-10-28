@@ -17,4 +17,6 @@ VOLUME /etc/caddy
 VOLUME /var/log/caddy
 VOLUME /var/lib/caddy/ssl
 
+EXPOSE 80 443
+
 CMD ["/usr/local/bin/caddy", "-agree=true", "-conf=/etc/caddy/Caddyfile", "-root=/var/tmp" ]
