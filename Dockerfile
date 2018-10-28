@@ -8,7 +8,8 @@ RUN addgroup -S caddy && \
     apk add --no-cache ca-certificates && \
     mkdir -p /usr/local/bin /etc/ssl/caddy /etc/caddy && \
     chown -R caddy:caddy /etc/caddy && \
-    mv /tmp/caddy /usr/local/bin
+    mv /tmp/caddy /usr/local/bin && \
+    chmod 755 /usr/local/bin/caddy
     
 ENV CADDYPATH=/etc/caddy/ssl
 
