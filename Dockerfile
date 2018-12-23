@@ -1,7 +1,7 @@
 FROM alpine
 MAINTAINER Scotty Logan <scotty@scottylogan.com>
 
-ADD https://caddyserver.com/download/linux/amd64?plugins=http.nobots,http.proxyprotocol,http.ratelimit,http.redir,http.realip&license=personal&telemetry=off /tmp/caddy.tar.gz
+ADD https://caddyserver.com/download/linux/amd64?plugins=http.nobots,http.proxyprotocol,http.ratelimit,http.realip&license=personal&telemetry=off /tmp/caddy.tar.gz
 
 RUN addgroup -S caddy && \
     adduser -h /var/tmp -s /bin/false -g Caddy -S -D -H -G caddy caddy && \
